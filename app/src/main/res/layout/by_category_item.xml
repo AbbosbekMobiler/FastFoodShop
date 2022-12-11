@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_6sdp"
+    android:layout_marginTop="@dimen/_4sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="2dp"
+    android:id="@+id/cardCategoryName"
+    app:cardCornerRadius="@dimen/_12sdp"
+    android:padding="@dimen/_12sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canadian"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+</androidx.cardview.widget.CardView>

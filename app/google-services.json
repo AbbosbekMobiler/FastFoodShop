@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "128899792713",
+    "project_id": "fastfood-shop",
+    "storage_bucket": "fastfood-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128899792713:android:84283320dcfbbf1e5e2498",
+        "android_client_info": {
+          "package_name": "abbosbek.mobiler.fastfoodshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128899792713-7n0ujgp0lcnk9dpn64onfin7c76oed98.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxLSlNTjj5bRtuyOVJ6XGIQ_yWjXgxv0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128899792713-7n0ujgp0lcnk9dpn64onfin7c76oed98.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

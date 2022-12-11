@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/actionHome"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:cnb_iconColor="@color/colorPrimary"/>
+    <item
+        android:id="@+id/actionSearch"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:cnb_iconColor="@color/colorPrimary"/>
+    <item
+        android:id="@+id/actionCart"
+        android:icon="@drawable/ic_bag"
+        android:title="Cart"
+        app:cnb_iconColor="@color/colorPrimary" />
+    <item
+        android:id="@+id/actionProfile"
+        android:icon="@drawable/ic_person"
+        android:title="Profile"
+        app:cnb_iconColor="@color/colorPrimary" />
+</menu>

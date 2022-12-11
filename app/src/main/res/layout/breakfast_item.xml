@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_12sdp"
+    android:layout_marginTop="@dimen/_4sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTop"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_120sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardElevation="@dimen/_4sdp"
+        android:elevation="@dimen/_4sdp">
+
+        <ImageView
+            android:id="@+id/imgBreakFast"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/discount1"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvBreakFastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/_12ssp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Name"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/cardTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/cardTop"/>
+
+    <ImageView
+        android:id="@+id/imgStar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_star"
+        app:tint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/tvBreakFastName"
+        app:layout_constraintStart_toStartOf="@id/tvBreakFastName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.1 - 29 min"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginStart="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvBreakFastName"
+        app:layout_constraintStart_toEndOf="@id/imgStar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
