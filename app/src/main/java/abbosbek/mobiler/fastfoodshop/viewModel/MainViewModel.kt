@@ -2,6 +2,7 @@ package abbosbek.mobiler.fastfoodshop.viewModel
 
 import abbosbek.mobiler.fastfoodshop.models.Category
 import abbosbek.mobiler.fastfoodshop.models.CouponsModel
+import abbosbek.mobiler.fastfoodshop.models.ItemModel
 import abbosbek.mobiler.fastfoodshop.models.TopModel
 import abbosbek.mobiler.fastfoodshop.repository.FoodRepository
 import androidx.lifecycle.LiveData
@@ -34,6 +35,9 @@ class MainViewModel : ViewModel() {
     private var  _coupons = MutableLiveData<List<CouponsModel>>()
     val coupons : LiveData<List<CouponsModel>> get() {return _coupons}
 
+    private var _items = MutableLiveData<List<ItemModel>>()
+    val items : LiveData<List<ItemModel>> get() {return _items}
+
     fun getCategory(){
         repository.getCategory( _progress,_error,_categoryFood)
     }
@@ -51,4 +55,9 @@ class MainViewModel : ViewModel() {
     fun getCategoryFood(a : String){
         repository.getCategoryFood(a,_error,_categoryFoodItem)
     }
+
+    fun getItemFood(i : String){
+        repository.getItemFood(i,_error,_items)
+    }
+
 }

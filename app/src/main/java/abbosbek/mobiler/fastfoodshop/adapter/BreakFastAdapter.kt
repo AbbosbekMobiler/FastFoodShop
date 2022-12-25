@@ -1,9 +1,12 @@
 package abbosbek.mobiler.fastfoodshop.adapter
 
+import abbosbek.mobiler.fastfoodshop.ItemActivity
 import abbosbek.mobiler.fastfoodshop.databinding.BreakfastItemBinding
 import abbosbek.mobiler.fastfoodshop.databinding.TopItemBinding
 import abbosbek.mobiler.fastfoodshop.models.Category
 import abbosbek.mobiler.fastfoodshop.models.TopModel
+import abbosbek.mobiler.fastfoodshop.utils.Constants
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +32,12 @@ class BreakFastAdapter(val items : List<TopModel>) : RecyclerView.Adapter<BreakF
         Glide.with(holder.itemView)
             .load(item.strMealThumb)
             .into(holder.binding.imgBreakFast)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context,ItemActivity::class.java)
+            intent.putExtra(Constants.ITEM,item)
+            holder.itemView.context.startActivity(intent)
+        }
 
     }
 

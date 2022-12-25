@@ -118,6 +118,31 @@ class FoodRepository {
         )
     }
 
+ fun getItemFood(
+     i : String,
+     error : MutableLiveData<String>,
+     success: MutableLiveData<List<ItemModel>>
+    ){
+        compositeDisposable.add(
+            api.getItem(i)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object : DisposableObserver<BaseTopModel<List<ItemModel>>>(){
+                    override fun onNext(t: BaseTopModel<List<ItemModel>>) {
+                        success.value = t.meals
+                    }
+
+                    override fun onError(e: Throwable) {
+                        error.value = e.localizedMessage
+                    }
+
+                    override fun onComplete() {
+                        //
+                    }
+                })
+        )
+    }
+
     fun getCoupons(
         error: MutableLiveData<String>,
         success: MutableLiveData<List<CouponsModel>>

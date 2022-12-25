@@ -1,9 +1,6 @@
 package abbosbek.mobiler.fastfoodshop.api
 
-import abbosbek.mobiler.fastfoodshop.models.BaseResponse
-import abbosbek.mobiler.fastfoodshop.models.BaseTopModel
-import abbosbek.mobiler.fastfoodshop.models.Category
-import abbosbek.mobiler.fastfoodshop.models.TopModel
+import abbosbek.mobiler.fastfoodshop.models.*
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -24,6 +21,12 @@ interface Api {
     fun getCategoryFood(
         @Query("a") a : String = "Canadian"
     ) : Observable<BaseTopModel<List<TopModel>>>
+
+    @GET("lookup.php")
+    fun getItem(
+        @Query("i") i : String
+    ) : Observable<BaseTopModel<List<ItemModel>>>
+
 
 
 }
